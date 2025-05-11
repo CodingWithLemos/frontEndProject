@@ -5,8 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
 </head>
+<header class="header_container">
+    <div>Home</div>
+    <div>My Goals</div>
+    <div>Social Media</div>
+    <div>Contact Me</div>
+</header>
 <body>
+    <link rel="stylesheet" href="styles.css">
     <h1>Hello, World!</h1>
-    <p>Welcome to my simple project made with HTML, CSS, and JavaScript!</p>
+    <h2>Welcome to my simple project made with HTML, CSS, and JavaScript!</h2>
+    <p>My name is <strong>Lemos</strong>, and I am the developer of these projects.</p>
+    <p>I have a degree in Technological Chemistry, but have decided to embrace the world of IT through developing web applications.</p>
+    <p>In my free time, I enjoy playing the guitar and listening to music.</p>
+    <p>Feel free to explore my other projects and reach out if you have any questions!</p>
+    <p>Want to make me some coffee? Add the ingredients below!</p>
+
+    <section class="coffee_prep">
+        <div>
+            <div>Water</div>
+            <div>
+                <button id="add_water" type="button" onclick="addWater()">add</button>
+                <button id="rm_water" type="button" onclick="removeWater()">remove</button>
+            </div>
+            <div id="water_qty">0</div>
+        </div>
+        <div>
+            <div>Ground Coffee</div>
+            <div>
+                <button id="add_coffee" type="button" onclick="addCoffee()">add</button>
+                <button id="rm_coffee" type="button" onclick="removeCoffee()">remove</button>
+            </div>
+            <div id="coffee_qty">0</div>
+        </div>
+        <div>
+            <div>Sugar</div>
+            <div>
+                <button id="add_sugar" type="button" onclick="addSugar()">add</button>
+                <button id="rm_sugar" type="button" onclick="removeSugar()">remove</button>
+            </div>
+            <div id="sugar_qty">0</div>
+        </div>
+        <div>
+            <div>Milk</div>
+            <div>
+                <button id="add_milk" type="button" onclick="addMilk()">add</button>
+                <button id="rm_milk" type="button" onclick="removeMilk()">remove</button>
+            </div>
+            <div id="milk_qty">0</div>
+        </div>
+    </section>
+    <script src="myJSsourceCode.js"></script>
 </body>
 </html>
