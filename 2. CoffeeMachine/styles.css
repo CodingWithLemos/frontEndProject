@@ -1,0 +1,48 @@
+body {
+    background-color: brown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2 {
+  font-family: inherit;
+  color:goldenrod;
+  width: 50%;  
+}
+
+.machine_controls { 
+display: grid;
+grid-template-areas: 'myArea myArea';
+background-color: wheat;
+width: fit-content;
+height: min-content;  
+border: solid 3px whitesmoke;
+border-radius: 3px;
+text-align: center;
+color: brown;
+font-size: larger;
+font-family: inherit;
+
+}
+
+.machine_controls > div {
+ margin: 5px 0 15px 0;
+}
+
+.buttons > div {
+  background-color: whitesmoke;
+  width: 60px;
+  height: 25px;
+  margin: 5px 45px 5px 45px;
+  border-radius: 5px;
+}
+
+#make_coffee {
+  grid-area: myArea;
+  width: 70%;
+  margin: 10px 5px 10px 5px;
+  cursor: pointer;
+}
+
+.buttons > button {
+  cursor: pointer;
+}
