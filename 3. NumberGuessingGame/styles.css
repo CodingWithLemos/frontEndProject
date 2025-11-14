@@ -1,0 +1,14 @@
+body {
+    background-color: #f0f8ff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #807e12;
+}
+
+#guess_result {
+    color: #ada1da;
+    padding: 10px;
+
+}

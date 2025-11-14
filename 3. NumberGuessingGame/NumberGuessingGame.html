@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number Guessing Game</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header charset="utf-8">
+            <h1>Guess the number from 1 to 100</h1>
+
+            <h2>Select your guess number on the interface!</h2>
+        </header>
+
+        <label for="numCredits">Your credit balance:</label><br>
+        <input type="number" id="numCredits" name="numCredits" min="1" max="10">
+        <button type="submit" id="addCreds">Add Credits</button><br>
+        <label for="guessNum">Your guess from 1 to 100:</label><br>
+        <input type="number" id="guessNum" name="guessNum" min="1" max="100">
+        <button type="submit" id="takeGuess">Start Guessing!</button>
+
+        <p id="guess_result"></p>
+
+        <script src = "guessingCode.js"></script>
+    </body>
+</html>
