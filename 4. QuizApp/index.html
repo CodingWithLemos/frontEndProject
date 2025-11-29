@@ -10,10 +10,10 @@
         <body>
             <header>
                 <h1>Welcome to my Quiz on World Cities</h1>
-                <figure>
+                <div class="logo_container">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Autism_Symbol_Proposed_2.png"/>
-                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Autism_Symbol_Proposed_2.png">MissLunaRose12</a>, Public domain, via Wikimedia Commons.</figcaption>
-                </figure>
+                    <a href="https://commons.wikimedia.org/wiki/File:Autism_Symbol_Proposed_2.png">MissLunaRose12</a>, Public domain, via Wikimedia Commons.
+                </div>
             </header>
 
             <section aria-labelledby="section-1">
@@ -53,13 +53,7 @@
                     <button id="verify_btn" type="submit" disabled onclick="my_function2()">Verify</button>
                 </fieldset>
 
-                <div id="feedback_correct" style="display: none;">
-                    <p id="correct">CORRECT!</p>
-                    <p>The correct answer is Lisbon.</p>
-                </div>
-
-                <div id="feedback_incorrect" style="display: none;">
-                    <p id="incorrect">NOT CORRECT.</p>
+                <div id="feedback_container" hidden>
                     <p>The correct answer is Lisbon.</p>
                 </div>
 
@@ -71,43 +65,29 @@
 
             function my_function1() {
 
-                const answer_verify = document.getElementById("verify_btn")
+                const answer_verify = document.getElementById("verify_btn");
 
-                answer_verify.removeAttribute("disabled")
+                answer_verify.removeAttribute("disabled");
         
             }
 
             function my_function2() {
 
-                const answer_correct = document.getElementById("feedback_correct")
-                const answer_incorrect = document.getElementById("feedback_incorrect")
+                let question_feedback = document.getElementById("feedback_container");
+                let btn_next = document.getElementById("next_btn");
 
-                const btn_next = document.getElementById("next_btn")     
-
-                let answers = document.querySelectorAll("fieldset#choices>div")
-
-                answers.forEach( answer => { 
-
-                    if (answer.querySelector("label").textContent == 'Lisbon') 
-                        { answer.setAttribute('style', 'background-color:#cee891')
-
-                    
-                        
-                          
-                        } else {
-                          answer.setAttribute('style', 'background-color:#ffb789')
-                
-                    
-                        }
-                    }
-                )
+                const answers = document.querySelectorAll("fieldset#choices > div");
 
                 
-                btn_next.removeAttribute("disabled")
+
+                question_feedback.removeAttribute("hidden");
+                btn_next.removeAttribute("disabled");
 
             }
 
             function my_function3() {
+
+                
 
             }
 

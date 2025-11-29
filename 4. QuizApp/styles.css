@@ -10,12 +10,3 @@ fieldset#choices > div:focus-within {
 
 }
 
-div#feedback_correct > p#correct {
-    color: #185300;
-    font-weight: bold;
-}
-
-div#feedback_incorrect > p#incorrect {
-    color: #700018;
-    font-weight: bold;
-}
