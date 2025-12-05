@@ -5,25 +5,19 @@ const answer_incorrect = document.getElementById("feedback_incorrect")
 // create the button to proceed to the next question
 const btn_next = document.getElementById("next_btn")
 
-// create the button to verify input
-const btn_verify = document.getElementById("btn_verify")
+// create function to enable 'verify' button
+function btn_enable() {
+    // create the button to verify input
+    var btn_verify = document.getElementById("verify_btn")
+
+    btn_verify.removeAttribute("disabled")
+
+}
 
 // accept user input
 let user_input = document.querySelectorAll("input")
 
+// enable the 'verify' button by clicking any input
 user_input.forEach(function(inpt) {
-
-    let inpt_str = ""
-
-    inpt.addEventListener("click", btn_verify.removeAttribute("disabled"))
-
-    inpt_str = inpt.nextSibling.textContent
-
-    if (inpt_str === 'Lisbon') {
-        answer_correct.setAttribute("style", "display: block;")
-    } else {
-        
-    }
-
+    inpt.addEventListener("click", btn_enable)
 })
-
