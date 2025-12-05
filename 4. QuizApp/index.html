@@ -26,31 +26,31 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="section-2">
-                <h3 id="section-2">What is the capital of Portugal?</h3>
+            <section aria-labelledby="question-container">
+                <h3 id="question-container">What is the capital of Portugal?</h3>
 
                 <fieldset id="choices">
                     <div>
-                        <input type="radio" id="choice1" name="answer" onclick="my_function1()">
+                        <input type="radio" id="choice1" name="answer">
                         <label for="choice1">Braga</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="choice2" name="answer" onclick="my_function1()">
+                        <input type="radio" id="choice2" name="answer">
                         <label for="choice2">Porto</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="choice3" name="answer" onclick="my_function1()">
+                        <input type="radio" id="choice3" name="answer">
                         <label for="choice3">Lisbon</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="choice4" name="answer" onclick="my_function1()">
+                        <input type="radio" id="choice4" name="answer">
                         <label for="choice4">Coimbra</label>
                     </div> 
 
-                    <button id="verify_btn" type="submit" disabled onclick="my_function2()">Verify</button>
+                    <button id="verify_btn" type="submit" disabled>Verify</button>
                 </fieldset>
 
                 <div id="feedback_correct" style="display: none;">
@@ -63,54 +63,10 @@
                     <p>The correct answer is Lisbon.</p>
                 </div>
 
-                <button id="next_btn" type="button" onclick="my_function3()" disabled>Next</button>
+                <button id="next_btn" type="reset" disabled>Next</button>
             </section>
         </body>
 
-        <script>
-
-            function my_function1() {
-
-                const answer_verify = document.getElementById("verify_btn")
-
-                answer_verify.removeAttribute("disabled")
-        
-            }
-
-            function my_function2() {
-
-                const answer_correct = document.getElementById("feedback_correct")
-                const answer_incorrect = document.getElementById("feedback_incorrect")
-
-                const btn_next = document.getElementById("next_btn")     
-
-                let answers = document.querySelectorAll("fieldset#choices>div")
-
-                answers.forEach( answer => { 
-
-                    if (answer.querySelector("label").textContent == 'Lisbon') 
-                        { answer.setAttribute('style', 'background-color:#cee891')
-
-                    
-                        
-                          
-                        } else {
-                          answer.setAttribute('style', 'background-color:#ffb789')
-                
-                    
-                        }
-                    }
-                )
-
-                
-                btn_next.removeAttribute("disabled")
-
-            }
-
-            function my_function3() {
-
-            }
-
-        </script>
+        <script src="index.js" ></script>
     </div>
 </html>
