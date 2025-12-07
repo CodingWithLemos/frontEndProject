@@ -1,6 +1,3 @@
-// create the button to proceed to the next question
-const btn_next = document.getElementById("next_btn")
-
 // create the button to verify input
 const btn_verify = document.getElementById("verify_btn")
 
@@ -20,6 +17,9 @@ user_input.forEach(function(inpt) {
 
 // evaluate user input
 function isCorrect() {
+    // create the button to proceed to the next question
+    const btn_next = document.getElementById("next_btn")
+
     // create the feedback containers
     const answer_correct = document.getElementById("feedback_correct")
     const answer_incorrect = document.getElementById("feedback_incorrect")
@@ -37,6 +37,9 @@ function isCorrect() {
         document.getElementById("choice3").parentElement.style.backgroundColor = "#b8eb93"
         answer_incorrect.style.display = "block"
     }
+
+    // enable the 'next' button
+    btn_next.removeAttribute("disabled")
 }
 
 btn_verify.addEventListener("click", isCorrect)
