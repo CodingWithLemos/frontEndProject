@@ -1,12 +1,8 @@
-// create the feedback containers
-const answer_correct = document.getElementById("feedback_correct")
-const answer_incorrect = document.getElementById("feedback_incorrect")
-
 // create the button to proceed to the next question
 const btn_next = document.getElementById("next_btn")
 
 // create the button to verify input
-let btn_verify = document.getElementById("verify_btn")
+const btn_verify = document.getElementById("verify_btn")
 
 // create function to enable 'verify' button
 function btn_enable() {
@@ -24,17 +20,23 @@ user_input.forEach(function(inpt) {
 
 // evaluate user input
 function isCorrect() {
+    // create the feedback containers
+    const answer_correct = document.getElementById("feedback_correct")
+    const answer_incorrect = document.getElementById("feedback_incorrect")
+
     let user_input = document.querySelector("input:checked")
-    let user_choice = user_input.nextSibling.textContent
     let container = user_input.parentElement
+    let user_choice = container.innerText.trim()
 
-    // style the answer container
+    // style the answer container and output the proper feedback
     if (user_choice === 'Lisbon') {
-        container.setAttribute("style", "background-color: #00ff00;")    
+        container.style.backgroundColor = "#b8eb93" 
+        answer_correct.style.display = "block"
     } else {
-        container.setAttribute("style", "background-color: #ff0000;")   
+        container.style.backgroundColor = "#ffab9c"
+        document.getElementById("choice3").parentElement.style.backgroundColor = "#b8eb93"
+        answer_incorrect.style.display = "block"
     }
-
 }
 
 btn_verify.addEventListener("click", isCorrect)
