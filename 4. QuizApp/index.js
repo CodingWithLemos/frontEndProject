@@ -51,6 +51,9 @@ function isCorrect() {
         inpt.setAttribute("disabled", "true")
         inpt.removeEventListener("click", btn_enable)
     })
+
+    // click the 'next' button to proceed to the next question
+    btn_next.addEventListener("click", function() { document.location.reload() })
 }
 
 btn_verify.addEventListener("click", isCorrect)
