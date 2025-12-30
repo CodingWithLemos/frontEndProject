@@ -40,6 +40,17 @@ function isCorrect() {
 
     // enable the 'next' button
     btn_next.removeAttribute("disabled")
+
+    // disable the 'verify' button so user can't re-verify after feedback
+    btn_verify.setAttribute("disabled", "disabled")
+
+    // disable all input buttons so user can't re-verify after feedback
+    const all_inputs = document.querySelectorAll("input")
+
+    all_inputs.forEach(function(inpt) {
+        inpt.setAttribute("disabled", "true")
+        inpt.removeEventListener("click", btn_enable)
+    })
 }
 
 btn_verify.addEventListener("click", isCorrect)
