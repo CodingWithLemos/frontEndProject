@@ -10,13 +10,9 @@
         <body>
             <header>
                 <h1>Welcome to my Quiz on World Cities</h1>
-                <figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Autism_Symbol_Proposed_2.png"/>
-                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Autism_Symbol_Proposed_2.png">MissLunaRose12</a>, Public domain, via Wikimedia Commons.</figcaption>
-                </figure>
             </header>
 
-            <section aria-labelledby="section-1">
+            <section class="quiz_inst" aria-labelledby="section-1">
                 <h2 id="section-1">Ready to test your knowledge of world cities?</h2>
                 <ul>
                     <li>Read each question carefully.</li>
@@ -26,31 +22,31 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="question-container">
+            <section class="question_fldst" aria-labelledby="question-container">
                 <h3 id="question-container">What is the capital of Portugal?</h3>
 
                 <fieldset id="choices">
                     <div>
-                        <input type="radio" id="choice1" name="answer">
+                        <input type="radio" id="choice1" name="answer" tabindex="0">
                         <label for="choice1">Braga</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="choice2" name="answer">
+                        <input type="radio" id="choice2" name="answer" tabindex="0">
                         <label for="choice2">Porto</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="choice3" name="answer">
+                        <input type="radio" id="choice3" name="answer" tabindex="0">
                         <label for="choice3">Lisbon</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="choice4" name="answer">
+                        <input type="radio" id="choice4" name="answer" tabindex="0">
                         <label for="choice4">Coimbra</label>
                     </div> 
 
-                    <button id="verify_btn" type="submit" disabled>Verify</button>
+                    <button id="verify_btn" type="submit" tabindex="0" disabled>Verify</button>
                 </fieldset>
 
                 <div id="feedback_correct" style="display: none;">
@@ -59,11 +55,11 @@
                 </div>
 
                 <div id="feedback_incorrect" style="display: none;">
-                    <p id="incorrect">NOT CORRECT</p>
+                    <p id="incorrect">NOT CORRECT.</p>
                     <p>The correct answer is Lisbon.</p>
                 </div>
 
-                <button id="next_btn" type="reset" disabled>Next</button>
+                <button id="next_btn" type="reset" tabindex="0" disabled>Next</button>
             </section>
         </body>
 
