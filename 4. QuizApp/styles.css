@@ -10,23 +10,35 @@ h1, h2, h3 {
         color: #a33f2e;
 }
 
+#question-container {
+
+    padding: 25px;
+
+}
+
+fieldset {
+    border: none;
+}
+
 .question_fldst {
 
     display: flex;
     flex-direction: column;
+    height: 30rem;
+    justify-content: space-around;
+    border: dotted 2px orange;
 }
 
 fieldset#choices {
 
     display: flex;
     flex-direction: column;
-
+    
 }
 
 fieldset#choices > div {
 
     padding: 15px;
-
 }
 
 fieldset#choices > div:focus-within {
@@ -59,11 +71,13 @@ button#verify_btn:disabled {
 }
 
 div#feedback_correct > p#correct {
+    background-color: #d3d3d3;
     color: #185300;
     font-weight: bold;
 }
 
 div#feedback_incorrect > p#incorrect {
+    background-color: #d3d3d3;
     color: #700018;
     font-weight: bold;
 }
