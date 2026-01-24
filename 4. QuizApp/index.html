@@ -1,63 +1,70 @@
 <!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>My Quiz App</title>
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to my Quiz on World Capitals</h1>
-            <div class="logo_container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Autism_Symbol_Proposed_2.png"/>
-                <a href="https://commons.wikimedia.org/wiki/File:Autism_Symbol_Proposed_2.png">MissLunaRose12</a>, Public domain, via Wikimedia Commons.
-            </div>
-        </header>
+    <div class="main_content" role="main">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width" />
+            <title>My Quiz App</title>
+            <link href="styles.css" rel="stylesheet" />
+        </head>
+        <body>
+            <header>
+                <h1>Welcome to my Quiz on World Cities</h1>
+            </header>
 
-        <section aria-labelledby="section-1">
-            <h2 id="section-1">Ready to test your knowledge of world capitals?</h2>
-            <ul>
-                <li>Read each question carefully.</li>
-                <li>Select the answer you consider correct.</li>
-                <li>Click 'Verify' so that the website can provide feedback.</li>
-                <li>Click 'Next' to move on to the next question.</li>
-            </ul>
-        </section>
+            <section class="quiz_inst" aria-labelledby="section-1">
+                <h2 id="section-1">Ready to test your knowledge of world cities?</h2>
+                <ul>
+                    <li>Read each question carefully.</li>
+                    <li>Select the answer you consider correct.</li>
+                    <li>Click 'Verify' so that the website can provide feedback.</li>
+                    <li>Click 'Next' to move on to the next question.</li>
+                </ul>
+            </section>
 
-        <section aria-labelledby="section-2">
-            <h3 id="section-2">lorem ipsum dolor sit amet?</h3>
-            <p>Select the answer you consider correct and click <strong>Verify</strong>.</p>
-            <fieldset>
-                <div>
-                    <input type="radio" id="choice1" name="answer">
-                    <label for="choice1">Lorem</label>
+            <section class="question_fldst" aria-labelledby="question-container">
+                <h3 id="question-container">What is the capital of Portugal?</h3>
+
+                <fieldset id="choices">
+                    <div>
+                        <input type="radio" id="choice1" name="answer" tabindex="0">
+                        <label for="choice1">Braga</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="choice2" name="answer" tabindex="0">
+                        <label for="choice2">Porto</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="choice3" name="answer" tabindex="0">
+                        <label for="choice3">Lisbon</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="choice4" name="answer" tabindex="0">
+                        <label for="choice4">Coimbra</label>
+                    </div> 
+                </fieldset>
+
+                <button id="verify_btn" type="submit" tabindex="0" disabled>Verify</button>
+
+                <button id="next_btn" type="reset" tabindex="0" disabled>Next</button>
+            </section>
+
+            <section class="feedback_container">
+                <div id="feedback_correct" style="display: none;">
+                    <p id="correct">CORRECT!</p>
+                    <p>The correct answer is Lisbon.</p>
                 </div>
 
-                <div>
-                    <input type="radio" id="choice2" name="answer">
-                    <label for="choice2">Ipsum</label>
+                <div id="feedback_incorrect" style="display: none;">
+                    <p id="incorrect">NOT CORRECT!</p>
+                    <p>The correct answer is Lisbon.</p>
                 </div>
+            </section>
+        </body>
 
-                <div>
-                    <input type="radio" id="choice3" name="answer">
-                    <label for="choice3">Dolor</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="choice4" name="answer">
-                    <label for="choice4">Sit amet</label>
-                </div> 
-
-                <button class="verify" type="submit" disabled>Verify</button>
-            </fieldset>
-        </section>
-
-        <section aria-labelledby="section-3" hidden>
-            <h3 id="section-3">ZING!</h3>
-        </section>
-
-        <button id="verif" disabled>Next</button>
-    </body>
-
-    <script></script>
+        <script src="index.js" ></script>
+    </div>
 </html>
