@@ -1,5 +1,5 @@
 html {
-    background-color: #f5ffff;
+    background-color: #e8ffe6;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
@@ -26,7 +26,9 @@ fieldset {
     flex-direction: column;
     height: 30rem;
     justify-content: space-around;
-    border: dotted 2px orange;
+    border-radius: 25px;
+    background-color: #fcfdff;
+
 }
 
 fieldset#choices {
@@ -55,29 +57,64 @@ label {
 button#next_btn {
     cursor: pointer;
     align-self: center;
+    background-color: #0095ff;
+    color: #fff;
+    padding: 15px;
+    width: 120px;
+    border-radius: 25px;
+    font-size: x-large;
+    border-style: none;
+}
+
+button#next_btn:hover {
+    background-color: #00cc11;
+    color: #fff;
 }
 
 button#next_btn:disabled {
     cursor: not-allowed;
+    background-color: #a3c7ff;
+    color: #e1e1e1;
 }
 
 button#verify_btn {
     cursor: pointer;
     align-self: center;
+    background-color: #0095ff;
+    color: #fff;
+    padding: 15px;
+    width: 120px;
+    border-radius: 25px;
+    font-size: x-large;
+    border-style: none;
+}
+
+button#verify_btn:hover {
+    background-color: #00cc11;
+    color: #fff;
 }
 
 button#verify_btn:disabled {
     cursor: not-allowed;
+    background-color: #a3c7ff;
+    color: #e1e1e1;
+
+}
+
+div#feedback_correct, div#feedback_incorrect {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    align-self: auto;
+    background-color: #fcfdff;
 }
 
 div#feedback_correct > p#correct {
-    background-color: #d3d3d3;
     color: #185300;
     font-weight: bold;
 }
 
 div#feedback_incorrect > p#incorrect {
-    background-color: #d3d3d3;
     color: #700018;
     font-weight: bold;
 }
