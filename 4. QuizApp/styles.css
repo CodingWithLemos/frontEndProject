@@ -1,5 +1,5 @@
 html {
-    background-color: #e8ffe6;
+    background: linear-gradient(60deg, #e8ffe6, #ffebc5);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
@@ -7,12 +7,12 @@ html {
 }
 
 h1, h2, h3 {
-        color: #a33f2e;
+    color: #CD3F06;
 }
 
 #question-container {
 
-    padding: 25px;
+    padding: 0 25px 25px;
 
 }
 
@@ -45,8 +45,8 @@ fieldset#choices > div {
 
 fieldset#choices > div:focus-within {
 
-    background-color: #9dafff;
-    color: #fff
+    background-color: #eff2ff;
+    border: solid 1px #0095ff;
 
 }
 
@@ -103,7 +103,7 @@ button#verify_btn:disabled {
 
 div#feedback_correct, div#feedback_incorrect {
     margin-top: 20px;
-    padding: 10px;
+    padding: 10px 25px 25px;
     border-radius: 25px;
     align-self: auto;
     background-color: #fcfdff;
